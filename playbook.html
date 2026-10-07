@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playbook — names, section starters &amp; ad copy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .pb-nav { position: sticky; top: 0; z-index: 60; background: rgba(8,9,12,.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .pb-nav .wrap { display:flex; gap:22px; align-items:center; padding:12px var(--pad); flex-wrap:wrap; font-size:.88rem; }
+  .pb-nav a { color: var(--muted); text-decoration:none; }
+  .pb-nav a:hover { color: var(--acid); }
+  .swatch { display:flex; gap:6px; margin-left:auto; }
+  .swatch i { width:20px;height:20px;border-radius:6px;cursor:pointer;border:1px solid rgba(255,255,255,.2); }
+  .copyblock { background:var(--panel); border:1px solid var(--line); border-radius:var(--r); padding:18px 20px; margin:12px 0; position:relative; }
+  .copyblock p { margin:0 0 8px; }
+  .copyblock p:last-child { margin:0; }
+  .copyblock .why { font-size:.82rem; color:var(--dim); border-top:1px dashed var(--line); padding-top:10px; margin-top:12px; }
+  .cp { position:absolute; top:12px; right:12px; background:rgba(255,255,255,.06); border:1px solid var(--line-strong); color:var(--muted); font-family:var(--font-mono); font-size:.68rem; padding:4px 10px; border-radius:var(--r-pill); cursor:pointer; }
+  .cp:hover { color:var(--acid); border-color:var(--acid); }
+  .vibe { font-family:var(--font-mono); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--flame); margin:34px 0 6px; }
+  .rule { background:rgba(198,255,61,.05); border-left:3px solid var(--acid); padding:14px 18px; border-radius:0 var(--r) var(--r) 0; margin:14px 0; font-size:.95rem; }
+  table { width:100%; border-collapse:collapse; margin:16px 0; font-size:.92rem; }
+  th, td { text-align:left; padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-family:var(--font-mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--acid); }
+  td:first-child { color:var(--muted); white-space:nowrap; }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="pb-nav">
+  <div class="wrap">
+    <strong style="font-family:var(--font-display)">PLAYBOOK</strong>
+    <a href="#names">1 · Identity lab</a>
+    <a href="#starters">2 · Section starters</a>
+    <a href="#hooks">3 · Ad hooks</a>
+    <a href="#ads">4 · Full ads</a>
+    <a href="#components">5 · Text widgets</a>
+    <a href="index.html" style="color:var(--acid)">← back to the page</a>
+    <div class="swatch" title="Preview accent colors">
+      <i data-skin="acid" style="background:#c6ff3d"></i>
+      <i data-skin="fire" style="background:#ff6b2c"></i>
+      <i data-skin="mint" style="background:#07f2c0"></i>
+      <i data-skin="violet" style="background:#8b5cf6"></i>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================ NAME LAB -->
+<section id="names">
+  <div class="wrap">
+    <span class="eyebrow">Step one</span>
+    <h1>Pick the name</h1>
+    <p class="lead muted" style="max-width:760px">
+      Lock this before you shoot anything — the @handle goes in the corner of every proof photo
+      and every video, so picking later means reshoots. Click any card to shortlist it; it copies
+      the whole set (brand, handle, member noun, hashtag) to your clipboard.
+      <br><br>
+      My pick is <b class="acid">Whitelisted</b> / <b class="acid">@imwhitelisted</b>, and the
+      reason is the member noun: someone can say <b>"I'm Whitelisted"</b> out loud and it means
+      something without revealing anything. It describes being <em>approved</em>, which is exactly
+      what they're buying — not the free stuff, the access.
+    </p>
+
+    <div class="rule">
+      <b>How to choose in 60 seconds:</b> say each name out loud as if you're telling a friend
+      at a party. If you have to explain it, cut it. Then check the handle is free on TikTok
+      and Instagram <b>before</b> you fall in love with it — the handle matters more than the domain now.
+    </div>
+
+    <div class="rule">
+      <b>You're not naming a website — you're naming a club.</b> Two different words:
+      the <b>brand</b> (the account people follow) and the <b>member noun</b> (the thing
+      someone says about themselves). The member noun is the one that matters. When somebody can
+      say <b>"I'm ___"</b> out loud, they stop being a customer and start being a member — and
+      members defend you in the comments for free.
+    </div>
+
+    <div class="vibe">A · My top picks</div>
+    <div class="names" id="nameList">
+
+      <div class="name-card" data-nm="Whitelisted" data-hd="@imwhitelisted" data-noun="Whitelisted" data-tag="#imwhitelisted">
+        <div class="nm">Whitelisted</div>
+        <div class="hd">@imwhitelisted</div>
+        <div class="why"><b>"I'm Whitelisted."</b> — It means you got approved and let in. It's
+        literally what happens to you, it sounds technical and a little exclusive, and it reveals
+        nothing about the retailer. <b>This is my pick.</b></div>
+      </div>
+
+      <div class="name-card" data-nm="The List" data-hd="@getonthelist" data-noun="on the List" data-tag="#onthelist">
+        <div class="nm">The List</div>
+        <div class="hd">@getonthelist</div>
+        <div class="why"><b>"I'm on the List."</b> — Three words everybody already understands.
+        Instantly creates the question "what list?" which is exactly the curiosity you want.
+        Zero risk of exposing anything.</div>
+      </div>
+
+      <div class="name-card" data-nm="Ghost" data-hd="@ghosthaul" data-noun="a Ghost" data-tag="#ghostmode">
+        <div class="nm">Ghost</div>
+        <div class="hd">@ghosthaul</div>
+        <div class="why"><b>"I'm a Ghost."</b> — Leans into the secrecy as the identity itself.
+        Younger, edgier, great on a thumbnail. Best if your audience skews under 30.</div>
+      </div>
+
+      <div class="name-card" data-nm="Cleared" data-hd="@getcleared" data-noun="Cleared" data-tag="#igotcleared">
+        <div class="nm">Cleared</div>
+        <div class="hd">@getcleared</div>
+        <div class="why"><b>"I got cleared."</b> — Sounds like security clearance. Implies there
+        was a bar to pass, which justifies charging for the guide and makes approval feel earned.</div>
+      </div>
+
+      <div class="vibe">B · More identity systems</div>
+
+      <div class="name-card" data-nm="Backstage" data-hd="@backstagehaul" data-noun="Backstage" data-tag="#backstage">
+        <div class="nm">Backstage</div>
+        <div class="hd">@backstagehaul</div>
+        <div class="why"><b>"I'm Backstage."</b> — One word for "I see what you don't."
+        Very strong with unboxing content.</div>
+      </div>
+
+      <div class="name-card" data-nm="Unlisted" data-hd="@unlistedclub" data-noun="Unlisted" data-tag="#unlisted">
+        <div class="nm">Unlisted</div>
+        <div class="hd">@unlistedclub</div>
+        <div class="why"><b>"I'm Unlisted."</b> — Clever double meaning: not publicly listed, but
+        still getting everything. Insider feel without saying a word about the program.</div>
+      </div>
+
+      <div class="name-card" data-nm="Tapped In" data-hd="@tappedin" data-noun="tapped in" data-tag="#tappedin">
+        <div class="nm">Tapped In</div>
+        <div class="hd">@tappedin</div>
+        <div class="why"><b>"I'm tapped in."</b> — Already slang, so it needs no explanation.
+        Very shareable, slightly street. Great if you're on camera a lot.</div>
+      </div>
+
+      <div class="name-card" data-nm="The Room" data-hd="@intheroom" data-noun="in the Room" data-tag="#intheroom">
+        <div class="nm">The Room</div>
+        <div class="hd">@intheroom</div>
+        <div class="why"><b>"I'm in the Room."</b> — Pure exclusivity. Works because the
+        invitation is literally the product.</div>
+      </div>
+
+      <div class="name-card" data-nm="Porch Club" data-hd="@porchclub" data-noun="Porch Club" data-tag="#porchclub">
+        <div class="nm">Porch Club</div>
+        <div class="hd">@porchclub</div>
+        <div class="why"><b>"It's on the porch."</b> — Visual and warm. Every delivery is a
+        content moment, and the name gives you a repeatable series format.</div>
+      </div>
+
+      <div class="name-card" data-nm="Zero" data-hd="@zerodrop" data-noun="a Zero" data-tag="#zeroclub">
+        <div class="nm">Zero</div>
+        <div class="hd">@zerodrop</div>
+        <div class="why"><b>"I'm a Zero."</b> — Shortest possible badge. Self-deprecating in a
+        way people enjoy. Slightly weaker: "zero" reads as nothing rather than approved.</div>
+      </div>
+
+      <div class="vibe">C · Your own ideas, sharpened</div>
+
+      <div class="name-card" data-nm="I Paid Zero" data-hd="@ipaidzero" data-noun="Paid Zero" data-tag="#ipaidzero">
+        <div class="nm">I Paid Zero</div>
+        <div class="hd">@ipaidzero</div>
+        <div class="why"><b>"I paid zero."</b> — Your idea, and it's genuinely strong: a full
+        sentence as a brand, which is native to how people talk on TikTok. Best as a
+        <b>personal</b> handle rather than a club name.</div>
+      </div>
+
+      <div class="name-card" data-nm="The Only Coupon" data-hd="@theonlycoupon" data-noun="an Only" data-tag="#theonlycoupon">
+        <div class="nm">The Only Coupon</div>
+        <div class="hd">@theonlycoupon</div>
+        <div class="why">Your "one and only coupon" idea, tightened. Leans on your
+        <b>"better than any coupon"</b> line. Risk: it's a <i>coupon</i> word, and you're selling
+        the opposite of coupons.</div>
+      </div>
+
+      <div class="name-card" data-nm="Free Life" data-hd="@freelifehq" data-noun="Free Life" data-tag="#freelife">
+        <div class="nm">Free Life</div>
+        <div class="hd">@freelifehq</div>
+        <div class="why">Your "freelife" idea. Broad and aspirational, easy to grow beyond
+        one method. Watch out — a few MLM-adjacent accounts use "freelife," so check first.</div>
+      </div>
+
+      <div class="name-card" data-nm="Nada Club" data-hd="@nadaclub" data-noun="Nada" data-tag="#nadaspent">
+        <div class="nm">Nada Club</div>
+        <div class="hd">@nadaclub</div>
+        <div class="why"><b>"I spent nada."</b> — Playful, memorable, easy to say.
+        Slightly more jokey than premium.</div>
+      </div>
+
+      <div class="name-card" data-nm="No Receipt" data-hd="@noreceipt" data-noun="Receipt-less" data-tag="#noreceipt">
+        <div class="nm">No Receipt</div>
+        <div class="hd">@noreceipt</div>
+        <div class="why">Because there's nothing to pay for. Conceptually sharp, but a little
+        abstract — you'd have to teach people what it means.</div>
+      </div>
+
+      <div class="name-card" data-nm="Big Ticket" data-hd="@bigtickethq" data-noun="Big Ticket" data-tag="#bigticket">
+        <div class="nm">Big Ticket</div>
+        <div class="hd">@bigtickethq</div>
+        <div class="why">Names your actual differentiator — nobody else is giving away mattresses
+        and e-bikes. Very clear, slightly less mysterious.</div>
+      </div>
+    </div>
+
+    <div class="rule" style="margin-top:26px;border-left-color:var(--flame);background:rgba(255,107,44,.06)">
+      <b>Words to avoid — they give it away:</b>
+      <span class="mono">sampler</span>, <span class="mono">tester</span>,
+      <span class="mono">reviewer</span>, <span class="mono">panel</span>,
+      <span class="mono">insider club</span>, <span class="mono">sample</span>,
+      <span class="mono">box</span>, <span class="mono">review club</span>,
+      <span class="mono">freebie</span>, <span class="mono">VIP program</span>.
+      Any one of these and a curious person can find the program in one search.
+      Names about <b>access</b> (whitelisted, cleared, on the list) protect you.
+      Names about <b>free stuff</b> don't reveal anything either — the danger is only the
+      <em>mechanism</em> words.
+    </div>
+
+    <div class="rule">
+      <b>Handle backup trick:</b> if the clean handle is taken, add a word that sounds native,
+      not desperate — <span class="mono">hq</span>, <span class="mono">club</span>,
+      <span class="mono">daily</span>, <span class="mono">co</span>, <span class="mono">files</span>.
+      Avoid numbers and underscores. <span class="mono">@imwhitelisted</span> &gt;
+      <span class="mono">@whitelisted_47</span> every time.
+    </div>
+
+    <div class="help" style="display:block">
+      <b class="tag">Once you pick</b>
+      Open <code>site.config.js</code> and change <code>brand</code>, <code>handle</code> and
+      <code>logoMark</code>. Every place the name appears on the page updates automatically —
+      nav, footer, page title, receipt, and the exported file name.
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== SECTION STARTERS -->
+<section id="starters" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Step two</span>
+    <h1>Section starter text</h1>
+    <p class="lead muted" style="max-width:760px">
+      The first line of every section decides whether the rest of it gets read.
+      Each block below is the <b>job</b> of that section, then three openers you can steal.
+      Brackets are fill-in-the-blanks.
+    </p>
+
+    <div class="vibe">The hero / above the fold</div>
+    <p class="muted" style="margin:0"><b>Job:</b> create disbelief in under 3 seconds. Do not explain anything yet.</p>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>A — The receipt opener (strongest)</b></p>
+      <p>“Random stuff worth up to $[699] keeps showing up at my door for $0.00. Not a coupon.
+      Not a glitch I found on Reddit. Last [Tuesday] it was a [exact item], and I've got the
+      receipt to prove it.”</p>
+      <div class="why">Leads with a number and a claim, then immediately offers evidence. Use this one.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>B — The anti-coupon opener</b></p>
+      <p>“Coupons are a 20% off hobby. This is a 100% off hobby. Every few days something shows
+      up at my house and the receipt says zero.”</p>
+      <div class="why">Best if your ad is running against coupon/savings audiences. It reframes instantly.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>C — The confession opener</b></p>
+      <p>“I need to say upfront this sounds like a scam. It isn't, and I'm not going to argue
+      about it — just watch the video where I do it without cutting the screen.”</p>
+      <div class="why">Names the objection in the first line. Very high trust, very high scroll-through.</div>
+    </div>
+
+    <div class="vibe">The “how it works” section</div>
+    <p class="muted" style="margin:0"><b>Job:</b> make it feel easy AND make step 2 feel like a secret.</p>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>A</b></p>
+      <p>“It's three steps, and you already know step one. Step two is the one everybody skips,
+      which is why most people try this once, get nothing, and decide it's fake.”</p>
+      <div class="why">Tells them they're smart, then tells them they're missing something. Works every time.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>B</b></p>
+      <p>“There's an order to this. Four things, in sequence. Do them out of order and nothing
+      arrives — no error, no email, just silence. That's the part nobody writes down.”</p>
+      <div class="why">Explains why they failed in the past without calling them dumb.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>C</b></p>
+      <p>“Ten minutes to learn. About three minutes to do. Then you wait a few days and a box
+      shows up. That's the whole thing — there's no part two where I upsell you.”</p>
+      <div class="why">Kills the “this will be a huge time sink” objection.</div>
+    </div>
+
+    <div class="vibe">The proof section</div>
+    <p class="muted" style="margin:0"><b>Job:</b> shut down “pics or it didn't happen” before they think it.</p>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>A</b></p>
+      <p>“Screenshots, not stories. These are all off my own phone — order totals, delivery
+      confirmations, and the stuff actually sitting in my house right now.”</p>
+      <div class="why">“Screenshots, not stories” is the line. Short and rhythmic.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>B</b></p>
+      <p>“I'm blurring my address because I'm not an idiot. Everything else is exactly as it
+      came off my screen.”</p>
+      <div class="why">Pre-empting the “why is it blurred” suspicion makes the unblurred parts more credible.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>C</b></p>
+      <p>“Photos can be faked, so here's the uncut screen recording — start to finish, no edits,
+      including the boring part where I'm waiting for the page to load.”</p>
+      <div class="why">The “boring part” detail is what makes it believable. Never cut it.</div>
+    </div>
+
+    <div class="vibe">The “what's inside” section</div>
+    <p class="muted" style="margin:0"><b>Job:</b> make the ebook feel fast to finish and specific.</p>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>A</b></p>
+      <p>“Short on purpose. You should finish it tonight and have your first claim in before bed.
+      If it were 200 pages I could charge more, but nobody finishes 200 pages.”</p>
+      <div class="why">Turns shortness from a weakness into the feature. Also justifies not charging more.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>B</b></p>
+      <p>“No fluff chapter about mindset. Chapter 1 gets you to your first claim. Chapter 7 is a
+      one-page cheat sheet you'll tape inside a cabinet.”</p>
+      <div class="why">Promises no filler — the #1 fear when buying any ebook.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>C</b></p>
+      <p>“Every chapter is a thing you do, not a thing you learn. You'll be mid-claim by page 15.”</p>
+      <div class="why">Action framing. Great for skimmers.</div>
+    </div>
+
+    <div class="vibe">The price section</div>
+    <p class="muted" style="margin:0"><b>Job:</b> make the price feel small next to the value, without fake urgency.</p>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>A</b></p>
+      <p>“$27. That's less than the last thing you bought on Amazon and forgot about.
+      One successful claim pays for it [20] times over.”</p>
+      <div class="why">Concrete comparison to their own behavior, not to abstract value.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>B</b></p>
+      <p>“I priced it at $27 because that's below the point where people need to think about it.
+      I'd rather you just try it.”</p>
+      <div class="why">Honest pricing rationale reads as confident, not salesy.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>C</b></p>
+      <p>“It's $27 today. It goes to $[47] when I finish the [update/alerts] section — the price
+      on the button is the real price, and if you buy now you keep the updates free.”</p>
+      <div class="why">Real, specific urgency. Only say this if it's true.</div>
+    </div>
+
+    <div class="vibe">The close</div>
+    <p class="muted" style="margin:0"><b>Job:</b> one last small push. Never beg.</p>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>A</b></p>
+      <p>“You'll spend more than $27 on stuff you don't even want this month. Ten minutes from
+      now you'll know how to do this — or you'll keep scrolling. Both are fine.”</p>
+      <div class="why">Gives them an out, which paradoxically raises conversion.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>B</b></p>
+      <p>“Worst case you're out $27 and you know the trick. Best case a $[499] [thing] shows up
+      next week. Those are the actual two outcomes.”</p>
+      <div class="why">Frames risk as tiny by naming both outcomes plainly.</div>
+    </div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p><b>C</b></p>
+      <p>“If it doesn't work you email me, I send your money back, and you keep the book.
+      I can offer that because almost nobody asks.”</p>
+      <div class="why">The most honest version of a guarantee — and it converts better than the legalistic one.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== HOOKS -->
+<section id="hooks">
+  <div class="wrap">
+    <span class="eyebrow">Step three</span>
+    <h1>Ad hooks</h1>
+    <p class="lead muted" style="max-width:760px">
+      First 3 seconds. The rule: <b>one weird, specific, true sentence</b>.
+      No “are you tired of…”, no “in today's video”, no “you won't believe”.
+    </p>
+
+    <div class="grid-2" style="gap:16px;margin-top:24px">
+      <div class="copyblock"><button class="cp">copy</button><p>“A $499 espresso machine showed up at my house on Thursday. I paid nothing.”</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>“This is the fourth thing this month that cost me zero dollars.”</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>“My neighbor asked if I'd started stealing. I just learned about the drop thing.”</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>“Stop clipping coupons. The version of this where the total is literally zero is easier.”</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>“I'm not saying 'free stuff' like a scammer, I'm showing you a receipt that says $0.00.”</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>“Three steps. Everyone knows step one. Almost nobody knows step two exists.”</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>“The reason nobody talks about this is that every person who learns it is one more person taking the items.”</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>“I got a pizza oven for free and I don't even like pizza that much.”</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>“You're going to assume this is fake. Fine. Watch me do it without cutting.”</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>“Day 61 of getting things delivered for $0. Today it's a robot vacuum.”</p></div>
+    </div>
+
+    <div class="vibe">Headline formulas you can reuse forever</div>
+    <table>
+      <tr><th>Formula</th><th>Filled in</th></tr>
+      <tr><td>[Specific item] for $[0]</td><td>“A $279 robot vacuum for $0.00”</td></tr>
+      <tr><td>[Number] things, $[0] spent</td><td>“19 things delivered. $0 spent.”</td></tr>
+      <tr><td>Better than [familiar thing]</td><td>“Better than any coupon”</td></tr>
+      <tr><td>Nobody knows [the hidden step]</td><td>“Nobody knows step two exists”</td></tr>
+      <tr><td>I [did thing], [unexpected result]</td><td>“I stopped using coupons and got more free stuff”</td></tr>
+      <tr><td>[Timeframe] of [the thing]</td><td>“Day 61 of getting things for free”</td></tr>
+      <tr><td>Not [thing they expect]. [Thing it is].</td><td>“Not a coupon. Not a glitch. Just zero.”</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================================================================ ADS -->
+<section id="ads" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Step four</span>
+    <h1>Full ad copy</h1>
+    <p class="lead muted" style="max-width:760px">Three lengths. Same offer, same structure: hook → proof → the missed step → the ask.</p>
+
+    <div class="vibe">Short (TikTok / Reels / Stories · ~15 sec)</div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p>“A $499 espresso machine showed up at my door last Thursday and I paid zero dollars.</p>
+      <p>It's not a coupon — coupons take 20% off, this takes 100% off.</p>
+      <p>Three steps. Everyone knows step one. Nobody knows step two exists, which is why people
+      try this once, get nothing, and call it fake.</p>
+      <p>I wrote it all down. It's $27. Link's right there.”</p>
+      <div class="why">On-screen text idea: put “$0.00” on screen the entire time, small, in the corner.</div>
+    </div>
+
+    <div class="vibe">Medium (Facebook / IG feed · 60–90 words)</div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p>“Random stuff worth up to $699 keeps showing up at my house and the receipt says $0.00.</p>
+      <p>Last week it was a robot vacuum. Before that, an air fryer. Before that, something I
+      genuinely can't explain.</p>
+      <p>It's not coupons, it's not cashback, and it's not a glitch that'll get patched next week.
+      There's a set of places giving items away on purpose — you just have to know where to look
+      and the exact order to claim in.</p>
+      <p>That order is the whole secret. Get it wrong and nothing arrives. No error, no email,
+      just nothing. That's why most people quit after one try.</p>
+      <p>I wrote it down in a short ebook. $27, instant download, refund if nothing shows up in
+      30 days.”</p>
+      <div class="why">The middle paragraph is doing the work — it names and dismisses the three
+      things they'll assume this is.</div>
+    </div>
+
+    <div class="vibe">Long (email / blog / sales page body)</div>
+    <div class="copyblock"><button class="cp">copy</button>
+      <p>“I need to open by saying this sounds like a scam, and I get it. If I saw this ad I'd
+      scroll past too.</p>
+      <p>So here's the receipt instead of a pitch: last Thursday, a $499 espresso machine. Total
+      paid: $0.00. The week before, a $279 robot vacuum. Same total.</p>
+      <p>Here's what it isn't. It isn't coupons — I don't clip anything. It isn't cashback — I'm
+      not waiting for 3% to dribble into an account. It isn't a glitch somebody found and posted
+      to Reddit that'll be dead by Friday.</p>
+      <p>What it actually is: a handful of places give items away on purpose. They don't advertise
+      it, because the moment everybody knows, the items are gone. Finding them takes about ten
+      minutes to learn.</p>
+      <p>But — and this is the whole thing — there's an order to claiming. Four steps, in sequence.
+      Miss one and nothing shows up. No error message, no rejection email. Just silence. That's
+      why almost everybody who tries this gives up after one attempt and tells their friends it's
+      fake. They're not lying. They just did it out of order.</p>
+      <p>I wrote the sequence down, along with where to look, how to tell a real drop from a waste
+      of time, and the mistakes that get people shut out. It's 48 pages, mostly screenshots.</p>
+      <p>$27. If you try it twice and nothing arrives, email me and I'll refund you — and you keep
+      the book.”</p>
+      <div class="why">The “here's what it isn't” paragraph is the highest-leverage paragraph in
+      the whole ad. Never cut it.</div>
+    </div>
+
+    <div class="vibe">Email subject lines</div>
+    <div class="grid-2" style="gap:14px">
+      <div class="copyblock"><button class="cp">copy</button><p>the $499 thing (I paid $0)</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>not a coupon</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>you skipped step 2</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>ok fine, here's the receipt</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>this showed up today. $0.00.</p></div>
+      <div class="copyblock"><button class="cp">copy</button><p>the part nobody writes down</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= COMPONENTS -->
+<section id="components">
+  <div class="wrap">
+    <span class="eyebrow">Step five</span>
+    <h1>The little text widgets</h1>
+    <p class="lead muted" style="max-width:760px">
+      These are the attention-grabbing boxes you asked for. Copy any of them into the page —
+      each one is one <code>&lt;div&gt;</code>.
+    </p>
+
+    <div class="grid-2" style="gap:18px;margin-top:26px;align-items:start">
+      <div>
+        <div class="callout co-hook">
+          <span class="co-label">The hook</span>
+          <p style="margin:0">Use for: the one sentence you want them to remember. Max 2 lines.</p>
+        </div>
+        <div class="callout co-proof">
+          <span class="co-label">Proof</span>
+          <p style="margin:0">Use next to any screenshot or number. Signals “verifiable.”</p>
+        </div>
+        <div class="callout co-warn">
+          <span class="co-label">Heads up</span>
+          <p style="margin:0">Use for the honest downsides. Weirdly, it increases trust <em>and</em> sales.</p>
+        </div>
+        <div class="callout co-quote">
+          <span class="co-label">Reader said</span>
+          <p style="margin:0">“Got the espresso machine. Still waiting for it to feel real.” — Dana R.</p>
+        </div>
+        <div class="callout co-stat">
+          <span class="co-label">most expensive thing I've gotten</span>
+          <span class="n">$699</span>
+          <span class="muted" style="font-size:.85rem">out of pocket: $0</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="copyblock"><button class="cp">copy</button>
+          <p><b>Hook box</b></p>
+          <p class="mono" style="font-size:.8rem;color:var(--muted)">&lt;div class="callout co-hook"&gt;&lt;span class="co-label"&gt;LABEL&lt;/span&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/div&gt;</p>
+        </div>
+        <div class="copyblock"><button class="cp">copy</button>
+          <p><b>Stat box</b></p>
+          <p class="mono" style="font-size:.8rem;color:var(--muted)">&lt;div class="callout co-stat"&gt;&lt;span class="co-label"&gt;LABEL&lt;/span&gt;&lt;span class="n"&gt;$699&lt;/span&gt;&lt;/div&gt;</p>
+        </div>
+        <div class="copyblock"><button class="cp">copy</button>
+          <p><b>Change the accent color</b></p>
+          <p class="mono" style="font-size:.8rem;color:var(--muted)">styles.css → :root → --acid / --flame / --ink</p>
+        </div>
+        <div class="rule" style="font-size:.9rem">
+          <b>Where each goes on your page:</b><br>
+          • Hook box → after “how it works”<br>
+          • Proof box → directly under every screenshot<br>
+          • Heads-up box → in the “skip this if” area<br>
+          • Stat boxes → the band right under the slot machine<br>
+          • Quote box → between the price and the FAQ
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="border-top:1px solid var(--line)">
+  <div class="wrap center">
+    <p class="legal" style="margin-bottom:18px">
+      One honest note: every number and example on this site is a placeholder you need to replace
+      with your real ones. Don't ship a single claim you can't back up with a screenshot — one
+      fake receipt found in your comments is worse than having no proof at all.
+    </p>
+    <a href="index.html" class="btn btn-acid">← Back to the landing page</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $ = function(s,r){return (r||document).querySelector(s);};
+  var $$ = function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
+
+  // scroll progress
+  var bar = $("#progress");
+  window.addEventListener("scroll", function(){
+    var y = window.scrollY, max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max>0 ? (y/max)*100 : 0) + "%";
+  }, {passive:true});
+
+  // name picker: click to shortlist
+  $$(".name-card").forEach(function(c){
+    c.addEventListener("click", function(){
+      $$(".name-card").forEach(function(x){x.classList.remove("chosen");});
+      c.classList.add("chosen");
+      var d = c.dataset;
+      var msg = 'brand:      "' + d.nm + '"\n' +
+                'handle:     "' + d.hd + '"\n' +
+                'memberNoun: "' + d.noun + '"\n' +
+                'hashtag:    "' + d.tag + '"\n' +
+                '→ site.config.js';
+      if (!c.querySelector(".picked")) {
+        var el = document.createElement("div");
+        el.className = "picked mono";
+        el.style.cssText = "margin-top:10px;font-size:.72rem;color:var(--acid);white-space:pre-line;line-height:1.6";
+        el.textContent = msg;
+        c.appendChild(el);
+      }
+      if (navigator.clipboard) navigator.clipboard.writeText(msg).catch(function(){});
+      if (c.animate) c.animate([{transform:"scale(1)"},{transform:"scale(1.03)"},{transform:"scale(1)"}],{duration:260});
+    });
+  });
+
+  // copy buttons
+  $$(".cp").forEach(function(b){
+    b.addEventListener("click", function(e){
+      e.stopPropagation();
+      var block = b.parentNode;
+      var txt = $$("p", block).filter(function(p){return !p.querySelector(".mono");})
+        .map(function(p){return p.textContent;}).join("\n\n");
+      if (!txt.trim()) txt = block.textContent.replace("copy","").trim();
+      if (navigator.clipboard) navigator.clipboard.writeText(txt).catch(function(){});
+      var old = b.textContent;
+      b.textContent = "copied ✓";
+      setTimeout(function(){ b.textContent = old; }, 1400);
+    });
+  });
+
+  // accent swatches
+  var skins = {
+    acid:   ["#c6ff3d","#ff6b2c","#07f2c0"],
+    fire:   ["#ff6b2c","#c6ff3d","#07f2c0"],
+    mint:   ["#07f2c0","#c6ff3d","#ff6b2c"],
+    violet: ["#8b5cf6","#c6ff3d","#07f2c0"]
+  };
+  $$(".swatch i").forEach(function(i){
+    i.addEventListener("click", function(){
+      var s = skins[i.dataset.skin];
+      document.documentElement.style.setProperty("--acid", s[0]);
+      document.documentElement.style.setProperty("--flame", s[1]);
+      document.documentElement.style.setProperty("--ink", s[2]);
+    });
+  });
+})();
+</script>
+</body>
+</html>
